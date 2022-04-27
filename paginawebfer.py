@@ -10,11 +10,11 @@ import psycopg2
 
 #conexión a base de datos 
 mydb = psycopg2.connect(
-    host="ec2-3-211-6-217.compute-1.amazonaws.com",
-    user="untvuqemhxwrqq",
-    port="5432",
-    passwd="bc6781043999d9d7cf2ad20fa838a99cd4a54bfd4c6eb7671752b42de741c5ee",
-    database="d9akdbicdmec92"
+    host='ec2-3-211-6-217.compute-1.amazonaws.com',
+    user='untvuqemhxwrqq',
+    port='5432',
+    password='bc6781043999d9d7cf2ad20fa838a99cd4a54bfd4c6eb7671752b42de741c5ee',
+    database='d9akdbicdmec92'
     )
 print (mydb)
 #esto solo nos imprime si la conexión se hizo
@@ -69,8 +69,8 @@ def programacion():
     Cliente = cursor.fetchone()
     return render_template('programacion.html',Cliente=Cliente)
 
-#if __name__ =='__main__':
-#    app.run(debug=True)
+if __name__ =='__main__':
+    app.run(debug=True)
 #esto hace que agarre sus cambios cuando esta en desarrollo 
 
 mydb.close()
