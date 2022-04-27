@@ -1,0 +1,76 @@
+{%extends "layout.html"%}
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active"
+            style="background-image: url(https://iddocente.com/wp-content/uploads/2018/08/idd_importancia_matematicas_educacion.jpg);">
+            <!--img src="../imagenes/imagen1.jpg" class="d-block w-100" alt="imagen1" , asi se pone en la local pero no jala aqui :v-->
+            <!--img src="https://mxcity.mx/wp-content/uploads/2016/05/nuevas-construcciones-cdmx.jpg" class="d-block w-100" alt="imagen1", asi desde internet-->
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item"
+            style="background-image: url(https://wp.unil.ch/emf/files/2017/09/Antonio-Mucciolo-EMF-araign%C3%A9e-bis_003-1024x943.jpg);">
+            <!--img src="https://revistaconstruir.com/wp-content/uploads/2021/07/construccion-ingenieros-proyectos.jpg" class="d-block w-100" alt="imagen2"-->
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="http://www.abcpedia.com/wp-content/uploads/2015/09/codigo-binario-ceros-y-unos.gif"
+                class="d-block w-100" alt="imagen3" />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<h1>{{Cliente.4}}</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Facebook</h5>
+          <p class="card-text">Puedes contactarnos desde Facebook si lo prefieres.</p>
+          <a href="{{Cliente.7}}" class="btn btn-primary">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Correo electronico</h5>
+          <p class="card-text">Puedes contactarnos por correo electronico.</p>
+          <a href="mailto:{{Cliente.6}}?subject=cotización&body=Me gustaría cotizar lo siguiente: %0D %0D %0D " class="btn btn-primary">Mandar correo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    
+    
+
+
+
+{% endblock %}
