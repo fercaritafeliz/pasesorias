@@ -69,8 +69,8 @@ def programacion():
     Cliente = cursor.fetchone()
     return render_template('programacion.html',Cliente=Cliente)
 
-#if __name__ =='__main__':
-#    app.run(debug=True)
+if __name__ =='__main__':
+    app.run(debug=True)
 #esto hace que agarre sus cambios cuando esta en desarrollo 
 
 mydb.close()
