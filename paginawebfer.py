@@ -1,5 +1,6 @@
 from flask import Flask,render_template
-import mysql.connector
+#import mysql.connector
+import psycopg2
 #import os
 #import sys
 #from string import Template
@@ -8,12 +9,12 @@ import mysql.connector
 #src=Template(filein.read())
 
 #conexión a base de datos 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    port="3306",
-    passwd="contraseñaSQL1@",
-    database="base_pagina"
+mydb = psycopg2.connect(
+    host="ec2-3-211-6-217.compute-1.amazonaws.com",
+    user="untvuqemhxwrqq",
+    port="5432",
+    passwd="bc6781043999d9d7cf2ad20fa838a99cd4a54bfd4c6eb7671752b42de741c5ee",
+    database="d9akdbicdmec92"
     )
 print (mydb)
 #esto solo nos imprime si la conexión se hizo
