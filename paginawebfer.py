@@ -10,11 +10,11 @@ import psycopg2
 
 #conexión a base de datos 
 mydb = psycopg2.connect(
-    host='ec2-3-211-6-217.compute-1.amazonaws.com',
-    user='untvuqemhxwrqq',
+    host='ec2-52-3-200-138.compute-1.amazonaws.com',
+    user='fdecjtyvkswfhn',
     port='5432',
-    password='bc6781043999d9d7cf2ad20fa838a99cd4a54bfd4c6eb7671752b42de741c5ee',
-    database='d9akdbicdmec92'
+    password='503e14b5b87fe81ccc7de48bcc5979402c471f46798851733e69f1d2bbed3abf',
+    database='dabtou06s1ljtc'
     )
 print (mydb)
 #esto solo nos imprime si la conexión se hizo
