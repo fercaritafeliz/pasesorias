@@ -38,7 +38,7 @@ def home():
     print("Propietario de la página es: "+ Cliente[1])
     return render_template('home.html',Cliente=Cliente)
 
-@app.route('about')
+@app.route('/about')
 def about():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
@@ -50,20 +50,20 @@ def layout():
     print(Cliente[3])
     return render_template('layout.html',Cliente=Cliente)
 
-@app.route('fisica')
+@app.route('/fisica')
 def fisica():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
     return render_template('fisica.html',Cliente=Cliente)
 
 
-@app.route('matematicas')
+@app.route('/matematicas')
 def matematicas():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
     return render_template('matematicas.html',Cliente=Cliente)    
 
-@app.route('programacion')
+@app.route('/programacion')
 def programacion():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
