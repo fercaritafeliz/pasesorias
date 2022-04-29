@@ -31,7 +31,7 @@ cursor = mydb.cursor()
 
 app=Flask(__name__)
 
-@app.route('')
+@app.route('/')
 def home():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
