@@ -36,38 +36,38 @@ def home():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
     print("Propietario de la página es: "+ Cliente[1])
-    return render_template('home.html',Cliente=Cliente)
+    return render_template('templates/home.html',Cliente=Cliente)
 
 @app.route('/about')
 def about():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
-    return render_template('about.html',Cliente=Cliente)
+    return render_template('templates/about.html',Cliente=Cliente)
 
 def layout():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
     print(Cliente[3])
-    return render_template('layout.html',Cliente=Cliente)
+    return render_template('templates/layout.html',Cliente=Cliente)
 
 @app.route('/fisica')
 def fisica():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
-    return render_template('fisica.html',Cliente=Cliente)
+    return render_template('templates/fisica.html',Cliente=Cliente)
 
 
 @app.route('/matematicas')
 def matematicas():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
-    return render_template('matematicas.html',Cliente=Cliente)    
+    return render_template('templates/matematicas.html',Cliente=Cliente)    
 
 @app.route('/programacion')
 def programacion():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
-    return render_template('programacion.html',Cliente=Cliente)
+    return render_template('templates/programacion.html',Cliente=Cliente)
 
 if __name__ =='__main__':
     app.run(debug=True)
