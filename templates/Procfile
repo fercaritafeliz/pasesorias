@@ -1,1 +1,1 @@
-web:gunicorn paginawebfer:app
+web: gunicorn paginawebfer:app
