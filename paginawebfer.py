@@ -1,4 +1,5 @@
-from flask import Flask,render_template
+from pyexpat import model
+from flask import Flask,render_template, request
 #import mysql.connector
 import psycopg2
 #import os
@@ -31,12 +32,19 @@ cursor = mydb.cursor()
 
 app=Flask(__name__)
 print("aqui entra a home")
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
     print("Propietario de la página es: "+ Cliente[1])
-    return render_template('home.html',Cliente=Cliente)
+    if request.method == 'POST':
+        model.save()
+        # Failure to return a redirect or render_template
+    else:
+        return render_template('home.html',Cliente=Cliente)
+    
+
+
 
 @app.route('/about')
 def about():
