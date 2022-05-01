@@ -1,7 +1,6 @@
 from pyexpat import model
 from flask import Flask,render_template, request
 #import mysql.connector
-from flask_sqlalchemy import SQLAlchemist
 
 import psycopg2
 #import os
@@ -23,10 +22,6 @@ import psycopg2
 
 
 app=Flask(__name__)
-app.config['SQLAlCHEMY_DATABASE_URI']='postgres://fdecjtyvkswfhn:503e14b5b87fe81ccc7de48bcc5979402c471f46798851733e69f1d2bbed3abf@ec2-52-3-200-138.compute-1.amazonaws.com:5432/dabtou06s1ljtc'
-db = SQLAlchemist(app)
-
-
 mydb = psycopg2.connect(
     host='ec2-52-3-200-138.compute-1.amazonaws.com',
     user='fdecjtyvkswfhn',
