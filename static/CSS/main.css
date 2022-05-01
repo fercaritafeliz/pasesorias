@@ -45,6 +45,13 @@ h1 {
         margin: 20px;
         float: center;
     }
+    #video1{
+        border-radius: 10%;
+        width: 270px;
+        height: 180px;
+        margin: 10px;
+        float: center;
+    }
 }
 
 /*versión de tablet*/
@@ -78,7 +85,7 @@ h1 {
         width: 500px;
         height: 250px;
         margin: 20px;
-        float: center;
+        float: right;
     }
 }
 
@@ -114,6 +121,6 @@ h1 {
         width: 700px;
         height: 400px;
         margin: 20px;
-        float: center;
+        float: right;
     }
 }
