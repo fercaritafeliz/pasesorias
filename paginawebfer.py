@@ -1,7 +1,7 @@
 from pyexpat import model
 from flask import Flask,render_template, request
-import mysql.connector
-#import psycopg2
+#import mysql.connector
+import psycopg2
 #import os
 #import sys
 #from string import Template
@@ -10,12 +10,12 @@ import mysql.connector
 #src=Template(filein.read())
 
 #conexión a base de datos 
-mydb = mysql.connector.connect(
-    host='fercaritafeliz.mysql.pythonanywhere-services.com',
-    user='fercaritafeliz',
-#    port='5432',
-    password='hola123A',
-    database='fercaritafeliz$default'
+mydb = psycopg2.connect(
+    host='ec2-52-3-200-138.compute-1.amazonaws.com',
+    user='fdecjtyvkswfhn',
+    port='5432',
+    password='503e14b5b87fe81ccc7de48bcc5979402c471f46798851733e69f1d2bbed3abf',
+    database='dabtou06s1ljtc'
     )
 print (mydb)
 #esto solo nos imprime si la conexión se hizo
@@ -77,8 +77,8 @@ def programacion():
     Cliente = cursor.fetchone()
     return render_template('programacion.html',Cliente=Cliente)
 
-#if __name__ =='__main__':
-#    app.run(debug=True)
+if __name__ =='__main__':
+    app.run(debug=True)
 #esto hace que agarre sus cambios cuando esta en desarrollo 
 
 mydb.close()
