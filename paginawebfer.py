@@ -66,6 +66,12 @@ def fisica():
     Cliente = cursor.fetchone()
     return render_template('fisica.html',Cliente=Cliente)
 
+@app.route('/Electrospinning')
+def Electrospinning():
+    cursor.execute("SELECT * FROM clietes WHERE ID = 1")
+    Cliente = cursor.fetchone()
+    return render_template('Electrospinning.html',Cliente=Cliente)
+
 
 @app.route('/matematicas')
 def matematicas():
@@ -85,4 +91,5 @@ if __name__ =='__main__':
 
 #mydb.close()
 #print("conexión a base de datos cerrada")
-    
+
+

@@ -1,19 +1,23 @@
 body {
-    background: #0F2027;
+    background: #a8c0ff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+    background: -webkit-linear-gradient(to top, #3f2b96, #a8c0ff);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to top, #3f2b96, #a8c0ff);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
+.texto-justificado{
+    text-align: justify;
+    }
 .resolucion {
     width: 99%;
     text-align: center;
 }
-h1{
+
+h1 {
     text-align: center;
 }
+
 /*versión de movil*/
 @media (max-width: 767px) {
     .desktop {
@@ -23,15 +27,26 @@ h1{
     .tablet {
         display: none;
     }
+
     .carousel-item {
         height: 10rem;
         background: rgb(0, 0, 0);
         background-position: center;
         background-size: cover;
     }
-    .navbar-brand{
-        white-space: initial;    }
+
+    .navbar-brand {
+        white-space: initial;
+    }
+    #imagencono{
+        border-radius: 10%;
+        width: 270px;
+        height: 270px;
+        margin: 20px;
+        float: center;
+    }
 }
+
 /*versión de tablet*/
 @media (min-width:768px) and (max-width: 990px) {
     .movil {
@@ -41,17 +56,25 @@ h1{
     .desktop {
         display: none;
     }
+
     .carousel-item {
         height: 20rem;
         background: rgb(0, 0, 0);
         background-position: center;
         background-size: cover;
     }
-    
-
-    .navbar-brand{
-        white-space: initial;    }
+    .navbar-brand {
+        white-space: initial;
+    }
+    #imagencono{
+        border-radius: 10%;
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+        float: left;
+    }
 }
+
 /*versión de desktop*/
 @media (min-width: 991px) {
     .tablet {
@@ -61,12 +84,22 @@ h1{
     .movil {
         display: none;
     }
+
     .carousel-item {
         height: 30rem;
         background: rgb(0, 0, 0);
         background-position: center;
         background-size: cover;
     }
-    .navbar-brand{
-        white-space: initial;    }
+
+    .navbar-brand {
+        white-space: initial;
+    }
+    #imagencono{
+        border-radius: 10%;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+        float: left;
+    }
 }
