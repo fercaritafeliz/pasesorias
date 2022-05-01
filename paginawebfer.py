@@ -10,16 +10,6 @@ import psycopg2
 #src=Template(filein.read())
 
 #conexión a base de datos 
-mydb = psycopg2.connect(
-    host='ec2-52-3-200-138.compute-1.amazonaws.com',
-    user='fdecjtyvkswfhn',
-    port='5432',
-    password='503e14b5b87fe81ccc7de48bcc5979402c471f46798851733e69f1d2bbed3abf',
-    database='dabtou06s1ljtc'
-    )
-print (mydb)
-#esto solo nos imprime si la conexión se hizo
-cursor = mydb.cursor()
 
 
 
@@ -31,6 +21,17 @@ cursor = mydb.cursor()
 
 
 app=Flask(__name__)
+mydb = psycopg2.connect(
+    host='ec2-52-3-200-138.compute-1.amazonaws.com',
+    user='fdecjtyvkswfhn',
+    port='5432',
+    password='503e14b5b87fe81ccc7de48bcc5979402c471f46798851733e69f1d2bbed3abf',
+    database='dabtou06s1ljtc'
+    )
+print (mydb)
+#esto solo nos imprime si la conexión se hizo
+cursor = mydb.cursor()
+
 print("aqui entra a home")
 @app.route('/', methods=['GET', 'POST'])
 def home():
