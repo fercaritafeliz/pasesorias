@@ -73,6 +73,13 @@ h1 {
         margin: 20px;
         float: left;
     }
+    #video1{
+        border-radius: 10%;
+        width: 500px;
+        height: 250px;
+        margin: 20px;
+        float: center;
+    }
 }
 
 /*versión de desktop*/
@@ -101,5 +108,12 @@ h1 {
         height: 400px;
         margin: 20px;
         float: left;
+    }
+    #video1{
+        border-radius: 10%;
+        width: 700px;
+        height: 400px;
+        margin: 20px;
+        float: center;
     }
 }
