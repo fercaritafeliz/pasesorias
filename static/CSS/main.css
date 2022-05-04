@@ -18,6 +18,8 @@ h1 {
     text-align: center;
 }
 
+
+
 /*versión de movil*/
 @media (max-width: 767px) {
     .desktop {
