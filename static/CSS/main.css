@@ -47,6 +47,13 @@ h1 {
         margin: 20px;
         float: center;
     }
+    #imagenferzas{
+        border-radius: 10%;
+        width: 270px;
+        height: 270px;
+        margin: 20px;
+        float: center;
+    }
     #video1{
         border-radius: 10%;
         width: 270px;
@@ -81,6 +88,13 @@ h1 {
         height: 250px;
         margin: 20px;
         float: left;
+    }
+    #imagenfuerzas{
+        border-radius: 10%;
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+        float: right;
     }
     #video1{
         border-radius: 10%;
@@ -118,11 +132,18 @@ h1 {
         margin: 20px;
         float: left;
     }
+    #imagenfuerzas{
+        border-radius: 10%;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+        float: right;
+    }
     #video1{
         border-radius: 10%;
         width: 700px;
         height: 400px;
         margin: 20px;
-        float: right;
+        float: left;
     }
 }

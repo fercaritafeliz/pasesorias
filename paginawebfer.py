@@ -1,5 +1,7 @@
+import mimetypes
 from pyexpat import model
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request, send_from_directory
+import os
 #import mysql.connector
 
 import psycopg2
@@ -45,8 +47,9 @@ def home():
     else:
         return render_template('home.html',Cliente=Cliente)
     
-
-
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path,'static'),'favicon.ico',mimetype='./images/favicon.ico')
 
 @app.route('/about')
 def about():
