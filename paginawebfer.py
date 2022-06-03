@@ -1,9 +1,10 @@
 import mimetypes
+from multiprocessing.connection import Client
 from pyexpat import model
-from flask import Flask,render_template, request, send_from_directory
+from re import X
+from flask import Flask,render_template,send_file, request, send_from_directory
 import os
 #import mysql.connector
-
 import psycopg2
 #import os
 #import sys
@@ -14,7 +15,12 @@ import psycopg2
 
 #conexión a base de datos 
 
-
+import io
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+import base64
+#import seaborn as sns
 
 #datos = cursor.fetchall()
 #for fila in datos:
@@ -34,7 +40,6 @@ mydb = psycopg2.connect(
 print (mydb)
 #esto solo nos imprime si la conexión se hizo
 cursor = mydb.cursor()
-
 print("aqui entra a home")
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -46,6 +51,7 @@ def home():
         # Failure to return a redirect or render_template
     else:
         return render_template('home.html',Cliente=Cliente)
+    
     
 @app.route("/favicon.ico")
 def favicon():
@@ -88,9 +94,34 @@ def programacion():
     Cliente = cursor.fetchone()
     return render_template('programacion.html',Cliente=Cliente)
 
+
+x=[1,2,3]
+y=[1,2,3]
+@app.route('/grafica')
+def grafica():
+    cursor.execute("SELECT * FROM clietes WHERE ID = 1")
+    Cliente = cursor.fetchone()
+    plt.clf() 
+    img = io.BytesIO()
+    plt.title("la grafica por: ")
+    plt.plot(x,y)
+    plt.savefig(img, format='png')
+    plt.switch_backend('agg')
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode()
+    return render_template('grafica.html', imagen={ 'imagen': plot_url },Cliente=Cliente)
+
+
+
 if __name__ =='__main__':
     app.run(debug=True)
 #esto hace que agarre sus cambios cuando esta en desarrollo 
+
+
+
+
+
+
 
 #mydb.close()
 #print("conexión a base de datos cerrada")
