@@ -92,13 +92,14 @@ def programacion():
     return render_template('programacion.html',Cliente=Cliente)
 
 
-x=[1,2,3]
-y=[1,2,3]
+
 @app.route('/grafica')
 def grafica():
+    x=[1,2,3]
+    y=[1,2,3]
     cursor.execute("SELECT * FROM clietes WHERE ID = 1")
     Cliente = cursor.fetchone()
-    plt.clf() 
+    #plt.clf() 
     img = io.BytesIO()
     plt.title("la grafica por: ")
     plt.plot(x,y)
