@@ -1,6 +1,5 @@
-import mimetypes
 from pyexpat import model
-from flask import Flask,render_template,send_file, request, send_from_directory
+from flask import Flask,render_template, request, send_from_directory
 import os
 #import mysql.connector
 import psycopg2
