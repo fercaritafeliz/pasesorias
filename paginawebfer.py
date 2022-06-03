@@ -112,9 +112,9 @@ def grafica():
 
 
 if __name__ =='__main__':
-    app.run(debug=True)
+    app.run()
 #esto hace que agarre sus cambios cuando esta en desarrollo 
-
+#debug=True
 
 
 
