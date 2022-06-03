@@ -1,7 +1,5 @@
 import mimetypes
-from multiprocessing.connection import Client
 from pyexpat import model
-from re import X
 from flask import Flask,render_template,send_file, request, send_from_directory
 import os
 #import mysql.connector
