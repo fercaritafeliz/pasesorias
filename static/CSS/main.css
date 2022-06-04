@@ -1,10 +1,13 @@
 body {
-    background: #a8c0ff;
+    /*esto es por si quiero un degradado en el fondo
+    /*background: #a8c0ff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #3f2b96, #a8c0ff);
+    /*background: -webkit-linear-gradient(to top, #3f2b96, #a8c0ff);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #3f2b96, #a8c0ff);
+    /*background: linear-gradient(to top, #3f2b96, #a8c0ff);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(../images/imagen5.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 .texto-justificado{
     text-align: justify;
