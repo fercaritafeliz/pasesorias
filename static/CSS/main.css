@@ -71,6 +71,9 @@ h1 {
         margin: 10px;
         float: center;
     }
+    #marco{
+        margin: 10px;
+    }
 }
 
 /*versión de tablet*/
@@ -116,6 +119,9 @@ h1 {
         height: 250px;
         margin: 20px;
         float: right;
+    }
+    #marco{
+        margin: 20px;
     }
 }
 
