@@ -47,6 +47,13 @@ h1 {
         margin: 20px;
         float: center;
     }
+    #graficas{
+        border-radius: 10%;
+        width: 270px;
+        height: 180px;
+        margin: 10px;
+        float: center;
+    }
     #imagenferzas{
         border-radius: 10%;
         width: 270px;
@@ -81,6 +88,10 @@ h1 {
     }
     .navbar-brand {
         white-space: initial;
+    }
+    #graficas {
+        border-radius: 10%;
+        float: center;
     }
     #imagencono{
         border-radius: 10%;
@@ -120,6 +131,10 @@ h1 {
         background: rgb(0, 0, 0);
         background-position: center;
         background-size: cover;
+    }
+    #graficas {
+        border-radius: 10%;
+        float: center;
     }
 
     .navbar-brand {
